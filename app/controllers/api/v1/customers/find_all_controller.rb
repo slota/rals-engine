@@ -8,7 +8,7 @@ class Api::V1::Customers::FindAllController < ApplicationController
   private
 
   def customer_params
-    params.permit(:first_name, :last_name)
+    params.permit(:first_name, :last_name, :created_at, :updated_at)
   end
 
 end
