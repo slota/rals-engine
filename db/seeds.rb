@@ -13,6 +13,8 @@ csv.each do |row|
   t = Customer.create
   t.first_name = row['first_name']
   t.last_name = row['last_name']
+  t.updated_at = row['updated_at']
+  t.created_at = row['created_at']
   t.save
   puts "#{t.first_name}, #{t.last_name} saved"
 end
@@ -22,6 +24,8 @@ csv = CSV.parse(csv_text, :headers => true)
 csv.each do |row|
   t = Merchant.create
   t.name = row['name']
+  t.updated_at = row['updated_at']
+  t.created_at = row['created_at']
   t.save
   puts "#{t.name} saved"
 end
@@ -32,8 +36,10 @@ csv.each do |row|
   t = Item.create
   t.name = row['name']
   t.description = row['description']
-  t.unit_price = row['unit_price']
+  t.unit_price = (row['unit_price'].to_f/100).to_s
   t.merchant_id = row['merchant_id']
+  t.updated_at = row['updated_at']
+  t.created_at = row['created_at']
   t.save
   puts "#{t.name} = #{t.description} saved"
 end
@@ -45,6 +51,8 @@ csv.each do |row|
   t.customer_id = row['customer_id']
   t.merchant_id = row['merchant_id']
   t.status = row['status']
+  t.updated_at = row['updated_at']
+  t.created_at = row['created_at']
   t.save
   puts "Invoice #{t.id} saved"
 end
@@ -55,8 +63,9 @@ csv.each do |row|
   t = Transaction.create
   t.invoice_id = row['invoice_id']
   t.credit_card_number = row['credit_card_number']
-  t.credit_card_expiration_date = row['credit_card_expiration_date']
   t.result = row['result']
+  t.updated_at = row['updated_at']
+  t.created_at = row['created_at']
   t.save
   puts "Transaction #{t.id} saved"
 end
@@ -66,9 +75,11 @@ csv = CSV.parse(csv_text, :headers => true)
 csv.each do |row|
   t = InvoiceItem.create
   t.quantity = row['quantity']
-  t.unit_price = row['unit_price']
+  t.unit_price = (row['unit_price'].to_f/100).to_s
   t.invoice_id = row['invoice_id']
   t.item_id = row['item_id']
+  t.updated_at = row['updated_at']
+  t.created_at = row['created_at']
   t.save
   puts "InvoiceItem #{t.id} saved"
 end
