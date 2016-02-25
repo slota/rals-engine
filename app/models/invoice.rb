@@ -8,5 +8,4 @@ class Invoice < ActiveRecord::Base
 
   scope :paid, -> { joins(:transactions).where(transactions: {result: "success"}) }
   scope :pending, -> { joins(:transactions).where(transactions: {result: "failed"}) }
-
 end
