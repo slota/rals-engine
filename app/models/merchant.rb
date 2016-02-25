@@ -21,6 +21,6 @@ class Merchant < ActiveRecord::Base
   end
 
   def self.most_revenue(quantity)
-    Merchant.all.map { |merchant| merchant.revenue }.sort_by { |v| -v }.take(quantity.to_i)
+    Merchant.all.sort_by { |merchant| -merchant.revenue }.take(quantity.to_i)
   end
 end

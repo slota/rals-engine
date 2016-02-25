@@ -9,7 +9,7 @@ RSpec.describe Api::V1::InvoiceItems::FindController, type: :controller do
 
       expect(response).to be_success
       expect(invoice_item.first["quantity"]).to eq 1
-      expect(invoice_item.first["unit_price"]).to eq "727"
+      expect(invoice_item.first["unit_price"]).to eq "727.0"
       expect(invoice_item.first["invoice_id"]).to eq 1
       expect(invoice_item.first["item_id"]).to eq 1
       expect(invoice_item.first["created_at"]).to eq "2012-03-25T09:54:09.000Z"
@@ -22,7 +22,7 @@ RSpec.describe Api::V1::InvoiceItems::FindController, type: :controller do
 
       expect(response).to be_success
       expect(invoice_item.first["quantity"]).to eq 1
-      expect(invoice_item.first["unit_price"]).to eq "727"
+      expect(invoice_item.first["unit_price"]).to eq "727.0"
       expect(invoice_item.first["invoice_id"]).to eq 1
       expect(invoice_item.first["item_id"]).to eq 1
       expect(invoice_item.first["created_at"]).to eq "2012-03-25T09:54:09.000Z"
@@ -35,7 +35,7 @@ RSpec.describe Api::V1::InvoiceItems::FindController, type: :controller do
 
       expect(response).to be_success
       expect(invoice_item.first["quantity"]).to eq 1
-      expect(invoice_item.first["unit_price"]).to eq "727"
+      expect(invoice_item.first["unit_price"]).to eq "727.0"
       expect(invoice_item.first["invoice_id"]).to eq 1
       expect(invoice_item.first["item_id"]).to eq 1
       expect(invoice_item.first["created_at"]).to eq "2012-03-25T09:54:09.000Z"
@@ -48,7 +48,7 @@ RSpec.describe Api::V1::InvoiceItems::FindController, type: :controller do
 
       expect(response).to be_success
       expect(invoice_item.first["quantity"]).to eq 1
-      expect(invoice_item.first["unit_price"]).to eq "727"
+      expect(invoice_item.first["unit_price"]).to eq "727.0"
       expect(invoice_item.first["invoice_id"]).to eq 1
       expect(invoice_item.first["item_id"]).to eq 1
       expect(invoice_item.first["created_at"]).to eq "2012-03-25T09:54:09.000Z"
@@ -63,7 +63,7 @@ RSpec.describe Api::V1::InvoiceItems::FindController, type: :controller do
 
       expect(response).to be_success
       expect(invoice_item["quantity"]).to eq 1
-      expect(invoice_item["unit_price"]).to eq "727"
+      expect(invoice_item["unit_price"]).to eq "727.0"
       expect(invoice_item["invoice_id"]).to eq 1
       expect(invoice_item["item_id"]).to eq 1
       expect(invoice_item["created_at"]).to eq "2012-03-25T09:54:09.000Z"
@@ -76,7 +76,7 @@ RSpec.describe Api::V1::InvoiceItems::FindController, type: :controller do
 
       expect(response).to be_success
       expect(invoice_item["quantity"]).to eq 1
-      expect(invoice_item["unit_price"]).to eq "727"
+      expect(invoice_item["unit_price"]).to eq "727.0"
       expect(invoice_item["invoice_id"]).to eq 1
       expect(invoice_item["item_id"]).to eq 1
       expect(invoice_item["created_at"]).to eq "2012-03-25T09:54:09.000Z"
@@ -89,7 +89,7 @@ RSpec.describe Api::V1::InvoiceItems::FindController, type: :controller do
 
       expect(response).to be_success
       expect(invoice_item["quantity"]).to eq 1
-      expect(invoice_item["unit_price"]).to eq "727"
+      expect(invoice_item["unit_price"]).to eq "727.0"
       expect(invoice_item["invoice_id"]).to eq 1
       expect(invoice_item["item_id"]).to eq 1
       expect(invoice_item["created_at"]).to eq "2012-03-25T09:54:09.000Z"
@@ -102,7 +102,7 @@ RSpec.describe Api::V1::InvoiceItems::FindController, type: :controller do
 
       expect(response).to be_success
       expect(invoice_item["quantity"]).to eq 1
-      expect(invoice_item["unit_price"]).to eq "727"
+      expect(invoice_item["unit_price"]).to eq "727.0"
       expect(invoice_item["invoice_id"]).to eq 1
       expect(invoice_item["item_id"]).to eq 1
       expect(invoice_item["created_at"]).to eq "2012-03-25T09:54:09.000Z"
