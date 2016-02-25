@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  first_name: Donald
+  last_name: Trump
+  created_at: 2012-03-25 09:54:09 UTC
+  updated_at: 2012-03-25 09:54:09 UTC
+
+two:
+  id: 2
+  first_name: Hillary
+  last_name: Clinton
+  created_at: 2012-03-25 09:54:09 UTC
+  updated_at: 2012-03-25 09:54:09 UTC

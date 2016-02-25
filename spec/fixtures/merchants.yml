@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  name: Jesus
+  created_at: 2012-03-25 09:54:09 UTC
+  updated_at: 2012-03-25 09:54:09 UTC
+
+two:
+  id: 2
+  name: Mohammed
+  created_at: 2012-03-25 09:54:09 UTC
+  updated_at: 2012-03-25 09:54:09 UTC

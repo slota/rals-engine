@@ -36,7 +36,7 @@ csv.each do |row|
   t = Item.create
   t.name = row['name']
   t.description = row['description']
-  t.unit_price = (row['unit_price'].to_f/100).to_s
+  t.unit_price = (row['unit_price'].to_f/100)
   t.merchant_id = row['merchant_id']
   t.updated_at = row['updated_at']
   t.created_at = row['created_at']
@@ -75,7 +75,7 @@ csv = CSV.parse(csv_text, :headers => true)
 csv.each do |row|
   t = InvoiceItem.create
   t.quantity = row['quantity']
-  t.unit_price = (row['unit_price'].to_f/100).to_s
+  t.unit_price = (row['unit_price'].to_f/100)
   t.invoice_id = row['invoice_id']
   t.item_id = row['item_id']
   t.updated_at = row['updated_at']
