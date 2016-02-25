@@ -10,19 +10,19 @@ RSpec.describe Api::V1::Transactions::FindController, type: :controller do
       expect(response).to be_success
       expect(transaction.first["invoice_id"]).to eq 1
       expect(transaction.first["credit_card_number"]).to eq "123"
-      expect(transaction.first["result"]).to eq "sweet"
+      expect(transaction.first["result"]).to eq "success"
       expect(transaction.first["created_at"]).to eq "2012-03-25T09:54:09.000Z"
       expect(transaction.first["updated_at"]).to eq "2012-03-25T09:54:09.000Z"
     end
 
     it "responds with all transactions with result" do
-      get :index, format: :json, result: "sweet"
+      get :index, format: :json, result: "success"
       transaction = JSON.parse(response.body)
 
       expect(response).to be_success
       expect(transaction.first["invoice_id"]).to eq 1
       expect(transaction.first["credit_card_number"]).to eq "123"
-      expect(transaction.first["result"]).to eq "sweet"
+      expect(transaction.first["result"]).to eq "success"
       expect(transaction.first["created_at"]).to eq "2012-03-25T09:54:09.000Z"
       expect(transaction.first["updated_at"]).to eq "2012-03-25T09:54:09.000Z"
     end
@@ -34,7 +34,7 @@ RSpec.describe Api::V1::Transactions::FindController, type: :controller do
       expect(response).to be_success
       expect(transaction.first["invoice_id"]).to eq 1
       expect(transaction.first["credit_card_number"]).to eq "123"
-      expect(transaction.first["result"]).to eq "sweet"
+      expect(transaction.first["result"]).to eq "success"
       expect(transaction.first["created_at"]).to eq "2012-03-25T09:54:09.000Z"
       expect(transaction.first["updated_at"]).to eq "2012-03-25T09:54:09.000Z"
     end
@@ -46,7 +46,7 @@ RSpec.describe Api::V1::Transactions::FindController, type: :controller do
       expect(response).to be_success
       expect(transaction.first["invoice_id"]).to eq 1
       expect(transaction.first["credit_card_number"]).to eq "123"
-      expect(transaction.first["result"]).to eq "sweet"
+      expect(transaction.first["result"]).to eq "success"
       expect(transaction.first["created_at"]).to eq "2012-03-25T09:54:09.000Z"
       expect(transaction.first["updated_at"]).to eq "2012-03-25T09:54:09.000Z"
     end
@@ -60,19 +60,19 @@ RSpec.describe Api::V1::Transactions::FindController, type: :controller do
       expect(response).to be_success
       expect(transaction["invoice_id"]).to eq 1
       expect(transaction["credit_card_number"]).to eq "123"
-      expect(transaction["result"]).to eq "sweet"
+      expect(transaction["result"]).to eq "success"
       expect(transaction["created_at"]).to eq "2012-03-25T09:54:09.000Z"
       expect(transaction["updated_at"]).to eq "2012-03-25T09:54:09.000Z"
     end
 
     it "responds with all transactions with result" do
-      get :show, format: :json, result: "sweet"
+      get :show, format: :json, result: "success"
       transaction = JSON.parse(response.body)
 
       expect(response).to be_success
       expect(transaction["invoice_id"]).to eq 1
       expect(transaction["credit_card_number"]).to eq "123"
-      expect(transaction["result"]).to eq "sweet"
+      expect(transaction["result"]).to eq "success"
       expect(transaction["created_at"]).to eq "2012-03-25T09:54:09.000Z"
       expect(transaction["updated_at"]).to eq "2012-03-25T09:54:09.000Z"
     end
@@ -82,7 +82,7 @@ RSpec.describe Api::V1::Transactions::FindController, type: :controller do
       transaction = JSON.parse(response.body)
 
       expect(response).to be_success
-      expect(transaction["result"]).to eq "sweet"
+      expect(transaction["result"]).to eq "success"
       expect(transaction["created_at"]).to eq "2012-03-25T09:54:09.000Z"
       expect(transaction["updated_at"]).to eq "2012-03-25T09:54:09.000Z"
     end
@@ -92,7 +92,7 @@ RSpec.describe Api::V1::Transactions::FindController, type: :controller do
       transaction = JSON.parse(response.body)
 
       expect(response).to be_success
-      expect(transaction["result"]).to eq "sweet"
+      expect(transaction["result"]).to eq "success"
       expect(transaction["created_at"]).to eq "2012-03-25T09:54:09.000Z"
       expect(transaction["updated_at"]).to eq "2012-03-25T09:54:09.000Z"
     end

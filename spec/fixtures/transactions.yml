@@ -4,7 +4,7 @@ one:
   id: 1
   invoice_id: 1
   credit_card_number: 123
-  result: sweet
+  result: success
   created_at: 2012-03-25 09:54:09 UTC
   updated_at: 2012-03-25 09:54:09 UTC
 
@@ -13,6 +13,6 @@ two:
   id: 2
   invoice_id: 2
   credit_card_number: 456
-  result: dope
+  result: failed
   created_at: 2012-03-25 09:54:09 UTC
   updated_at: 2012-03-25 09:54:09 UTC

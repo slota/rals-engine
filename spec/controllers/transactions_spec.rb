@@ -9,11 +9,11 @@ RSpec.describe Api::V1::TransactionsController, type: :controller do
       expect(response).to be_success
       expect(transactions.first["invoice_id"]).to eq 1
       expect(transactions.first["credit_card_number"]).to eq "123"
-      expect(transactions.first["result"]).to eq "sweet"
+      expect(transactions.first["result"]).to eq "success"
 
       expect(transactions.last["invoice_id"]).to eq 2
       expect(transactions.last["credit_card_number"]).to eq "456"
-      expect(transactions.last["result"]).to eq "dope"
+      expect(transactions.last["result"]).to eq "failed"
     end
   end
 
@@ -24,7 +24,7 @@ RSpec.describe Api::V1::TransactionsController, type: :controller do
       expect(response).to be_success
       expect(transaction["invoice_id"]).to eq 2
       expect(transaction["credit_card_number"]).to eq "456"
-      expect(transaction["result"]).to eq "dope"
+      expect(transaction["result"]).to eq "failed"
     end
   end
 end

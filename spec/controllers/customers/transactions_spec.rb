@@ -10,7 +10,7 @@ RSpec.describe Api::V1::Customers::TransactionsController, type: :controller do
       expect(response).to be_success
       expect(transactions.first["invoice_id"]).to eq 1
       expect(transactions.first["credit_card_number"]).to eq "123"
-      expect(transactions.first["result"]).to eq "sweet"
+      expect(transactions.first["result"]).to eq "success"
     end
   end
 end
